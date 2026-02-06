@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-700 bg-neutral-50 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-primary-dark;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-primary-light transition-colors duration-300 shadow-sm;
+  }
+  
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-sm text-primary-dark bg-accent hover:bg-accent-light transition-colors duration-300 shadow-sm;
+  }
+  
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-sm text-white hover:bg-white hover:text-primary transition-colors duration-300;
+  }
+
+  .btn-outline-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-primary text-base font-medium rounded-sm text-primary hover:bg-primary hover:text-white transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 hover:bg-neutral-700 rounded-full;
+}
